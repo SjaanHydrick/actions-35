@@ -5,7 +5,7 @@ import { useDispatch } from '../../state/PostProvider';
 const PostForm = () => {
   const dispatch = useDispatch();
 
-  const [id, setId] = useState(0);
+  const [id, setId] = useState(1);
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
 
@@ -13,6 +13,7 @@ const PostForm = () => {
     e.preventDefault();
 
     setId(id + 1);
+    
     dispatch(createPost({ id, title, body }));
   };
 

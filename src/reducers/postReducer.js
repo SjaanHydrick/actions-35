@@ -9,7 +9,7 @@ export default function reducer(state, action) {
     case CREATE_POST:
       return {
         ...state,
-        posts: [...state.post, action.payload]
+        posts: [...state.posts, action.payload]
       };
     case DELETE_POST:
       return {

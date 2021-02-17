@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispach } from '../../state/PostProvider';
+import { useDispatch } from '../../state/PostProvider';
 import { deletePost } from '../../actions/postActions';
 
 const Post = ({ id, title, body }) => {
-  const dispatch = useDispach();
+  const dispatch = useDispatch();
 
   const handleClick = () => {
     dispatch(deletePost(id));
@@ -13,6 +13,7 @@ const Post = ({ id, title, body }) => {
   return (
     <>
       <div>
+        <p>{id}</p>
         <p>Title:</p>
         <p>{title}</p>
         <p>Body:</p>
