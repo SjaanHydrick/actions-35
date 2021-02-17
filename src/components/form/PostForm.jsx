@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createPost } from '../../actions/postActions';
 import { useDispatch } from '../../state/PostProvider';
+import styles from './PostForm.css';
 
 const PostForm = () => {
   const dispatch = useDispatch();
@@ -19,19 +20,22 @@ const PostForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <span>Title: </span>
       <input
         type="text"
         placeholder="Title"
         value={title}
         onChange={({ target }) => setTitle(target.value)}
       />
+
+      <span>Body: </span>
       <input
         type="body"
         placeholder="Body"
         value={body}
         onChange={({ target }) => setBody(target.value)}
       />
-      <button>Create Post</button>
+      <button className={styles.create}>Create Post</button>
     </form>
   );
 };

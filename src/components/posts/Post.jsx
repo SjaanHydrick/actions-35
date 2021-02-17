@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from '../../state/PostProvider';
 import { deletePost } from '../../actions/postActions';
+import styles from './Post.css';
 
 const Post = ({ id, title, body }) => {
   const dispatch = useDispatch();
@@ -12,14 +13,13 @@ const Post = ({ id, title, body }) => {
 
   return (
     <>
-      <div>
+      <div className={styles.post}>
+        <p className={styles.buttonp}>
+          <button className={styles.delete} onClick={handleClick}> </button></p>
         <p>{id}</p>
-        <p>Title:</p>
         <p>{title}</p>
-        <p>Body:</p>
         <p>{body}</p>
       </div>
-      <button onClick={handleClick}>Delete</button>
     </>
   );
 };

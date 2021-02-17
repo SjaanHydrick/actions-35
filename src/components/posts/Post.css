@@ -1,0 +1,56 @@
+.post {
+    display: grid;
+    grid-template-columns: 10% 10% 40% 40%;
+    border: solid 1px white;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    margin-left: 2px;
+    padding-left: 10px;
+    font-family: Tahoma;
+    line-height: 3em;
+    background-color: lightblue;
+}
+
+h3 {
+    margin: 0;
+    margin-left: 2px;
+    padding-left: 10px;
+    font-family: Tahoma;
+    line-height: 3em;
+    color: white;
+    background-color: royalblue;
+}
+
+.buttonp {
+    text-align: center;
+}
+
+.delete {
+    height: 20px;
+    width: 20px;
+}
+
+form {
+    margin-bottom: 8%;
+}
+
+input {
+    border: solid 1px royalblue;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    width: 30%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5em;
+    font-size: 12pt;
+}
+
+span {
+    margin-right: 1%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12pt;
+    font-weight: 600;
+}
