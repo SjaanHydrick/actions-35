@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { createPost } from '../../actions/postActions';
-import { useDispatch } from '../../state/PostProvider';
+import { useDispatch } from 'react-redux';
 import styles from './PostForm.css';
 
 const PostForm = () => {
