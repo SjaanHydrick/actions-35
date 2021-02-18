@@ -8,10 +8,10 @@ import styles from './Post.css';
 const PostList = () => {
   const posts = useSelector(getPosts);
 
-  const postElements = posts.map(post => (
-    <div key={post.id}>
+  const postElements = posts.map((post, i) => (
+    <div key={i}>
       <Link to="/:id/comments">
-        <Post {...post} />
+        <Post {...post} index={i} />
       </Link>
     </div>
   ));
