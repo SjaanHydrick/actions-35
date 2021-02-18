@@ -7,6 +7,7 @@ import styles from './Post.css';
 
 const PostList = () => {
   const posts = useSelector(getPosts);
+  console.log(posts);
 
   const postElements = posts.map((post, i) => (
     <div key={i}>

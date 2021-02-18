@@ -10,7 +10,7 @@ export default function reducer(state = initialState, action) {
     case CREATE_COMMENT:
       return {
         ...state,
-        comments: [...state.posts, action.payload]
+        comments: [...state.comments, action.payload]
       };
     case DELETE_COMMENT:
       return {
