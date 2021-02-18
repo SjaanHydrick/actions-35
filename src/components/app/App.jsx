@@ -1,12 +1,21 @@
 import React from 'react';
-import PostForm from '../form/PostForm';
-import PostList from '../posts/PostList';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
+import CommentsPage from '../comments/CommentsPage';
+import PostsPage from '../posts/PostsPage';
 
 export default function App() {
   return (
     <>
-      <PostForm />
-      <PostList />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={PostsPage} />
+          <Route exact path="/:id/comments" component={CommentsPage} />
+        </Switch>
+      </Router>
     </>
   );
 }
