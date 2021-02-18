@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deletePost } from '../../actions/postActions';
+import { Link } from 'react-router-dom';
 import styles from './Post.css';
 
 const Post = ({ id, title, body }) => {
@@ -18,7 +19,9 @@ const Post = ({ id, title, body }) => {
           <button className={styles.delete} onClick={handleClick}> </button></p>
         <p>{id}</p>
         <p>{title}</p>
-        <p>{body}</p>
+        <Link to={`/id=${id}/comments`} >
+          <p>{body}</p>
+        </Link>
       </div>
     </>
   );

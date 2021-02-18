@@ -10,14 +10,17 @@ const PostForm = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
 
+  
   const handleSubmit = e => {
     e.preventDefault();
-
+    
     setId(id + 1);
     
     dispatch(createPost({ id, title, body }));
   };
-
+  
+  console.log(id);
+  
   return (
     <form onSubmit={handleSubmit}>
       <span>Title: </span>

@@ -1,11 +1,11 @@
 export const CREATE_POST = 'CREATE_POST';
-export const createPost = post => ({
+export const createPost = (index, post) => ({
   type: CREATE_POST,
-  payload: post
+  payload: { index, post }
 });
 
 export const DELETE_POST = 'DELETE_POST';
-export const deletePost = (id) => ({
+export const deletePost = (index) => ({
   type: DELETE_POST,
-  payload: id
+  payload: index
 });
