@@ -5,6 +5,7 @@ import Comment from './Comment';
 
 const CommentList = () => {
   const comments = useSelector(getComments);
+  console.log(comments);
 
   const commentElements = comments.map(comment => (
     <div key={comment.id}>

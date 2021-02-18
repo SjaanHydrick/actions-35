@@ -15,7 +15,7 @@ const Comment = ({ id, body }) => {
       <div>
         <p>{body}</p>
         <p>
-          <button onClick={handleClick}> </button>
+          <button onClick={handleClick}>Delete</button>
         </p>
       </div>
     </>

@@ -9,10 +9,10 @@ const PostList = () => {
   const posts = useSelector(getPosts);
   console.log(posts);
 
-  const postElements = posts.map((post, i) => (
-    <div key={i}>
+  const postElements = posts.map(post => (
+    <div key={post.id}>
       <Link to="/:id/comments">
-        <Post {...post} index={i} />
+        <Post {...post} />
       </Link>
     </div>
   ));
