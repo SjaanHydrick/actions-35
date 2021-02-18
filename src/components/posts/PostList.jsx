@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { getPosts } from '../../selector/postSelectors';
+import { Link } from 'react-router-dom';
 import Post from './Post';
 import styles from './Post.css';
 
@@ -9,7 +10,9 @@ const PostList = () => {
 
   const postElements = posts.map(post => (
     <div key={post.id}>
-      <Post {...post} />
+      <Link to="/:id/comments">
+        <Post {...post} />
+      </Link>
     </div>
   ));
 
