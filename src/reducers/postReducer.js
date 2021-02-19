@@ -1,7 +1,10 @@
-import { CREATE_POST, DELETE_POST } from '../actions/postActions';
+/* eslint-disable max-len */
+import { CREATE_POST, DELETE_POST, UPDATE_POST_ID } from '../actions/postActions';
 
 export const initialState = {
-  posts: []
+  posts: [],
+  comments: [],
+  postId: 0
 };
 
 export default function reducer(state = initialState, action) {
@@ -14,7 +17,13 @@ export default function reducer(state = initialState, action) {
     case DELETE_POST:
       return {
         ...state,
-        posts: state.posts.filter(post => post.id !== action.payload)
+        posts: state.posts.filter(post => post.id !== action.payload),
+        comments: state.comments.filter(comment => comment.postId !== action.payload)
+      };
+    case UPDATE_POST_ID:
+      return {
+        ...state,
+        postId: action.payload
       };
     default:
       return state;
