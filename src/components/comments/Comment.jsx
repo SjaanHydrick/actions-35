@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { deleteComment } from '../../actions/postComments';
+import { deleteComment } from '../../actions/commentActions';
 
 const Comment = ({ id, body }) => {
   const dispatch = useDispatch();

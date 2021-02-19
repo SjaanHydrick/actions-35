@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { CREATE_COMMENT, DELETE_COMMENT } from '../actions/postComments';
+import { CREATE_COMMENT, DELETE_COMMENT } from '../actions/commentActions';
 
 export const initialState = {
   comments: []

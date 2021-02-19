@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { createComment } from '../../actions/postComments';
+import { createComment } from '../../actions/commentActions';
 import { useDispatch } from 'react-redux';
 
 const CommentForm = () => {
