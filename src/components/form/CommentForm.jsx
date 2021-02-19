@@ -24,7 +24,7 @@ const CommentForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <span>Comment:</span>
+      <span>Comment: </span>
       <input
         type="text"
         placeholder="Comment"

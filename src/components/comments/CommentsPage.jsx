@@ -9,6 +9,7 @@ const CommentsPage = () => {
     <>
       <Link to="/" className={styles.homebutton}>Back to Home</Link>
       <CommentForm />
+      <h3>Comments: </h3>
       <CommentList />
     </>
   );
