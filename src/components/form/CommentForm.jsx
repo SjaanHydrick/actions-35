@@ -1,19 +1,24 @@
 import React, { useState } from 'react';
-import { createComment } from '../../actions/commentActions';
-import { useDispatch } from 'react-redux';
+import { createComment, updateCommentId } from '../../actions/commentActions';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { getCommentId } from '../../selector/commentSelectors';
 
 const CommentForm = () => {
   const dispatch = useDispatch();
+  const commentId = useSelector(getCommentId);
+  const paramId = useParams();
+  const postId = paramId.id;
 
-  const [id, setId] = useState(1);
   const [body, setBody] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
 
-    setId(id + 1);
-
-    dispatch(createComment({ id, body }));
+    const id = commentId + 1;
+    
+    dispatch(updateCommentId(id));
+    dispatch(createComment({ id, postId, body }));
   };
 
   return (
