@@ -19,7 +19,7 @@ const Post = ({ id, title, body }) => {
           <button className={styles.delete} onClick={handleClick}> </button></p>
         <p>{id}</p>
         <p>{title}</p>
-        <Link to={`/id=${id}/comments`} >
+        <Link to={`/posts/${id}`} >
           <p>{body}</p>
         </Link>
       </div>

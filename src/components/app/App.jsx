@@ -13,7 +13,7 @@ export default function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={PostsPage} />
-          <Route exact path="/id=:postid/comments" component={CommentsPage} />
+          <Route exact path="/posts/:id" component={CommentsPage} />
         </Switch>
       </Router>
     </>
