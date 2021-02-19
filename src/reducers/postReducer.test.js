@@ -22,13 +22,15 @@ describe('post reducer', () => {
 
   it('delete a post with DELETE_POST action', () => {
     const state = {
-      posts: [{ id: 1, title: 'blah', body: 'blahblahblah' }]
+      posts: [{ id: 1, title: 'blah', body: 'blahblahblah' }],
+      comments: []
     };
 
     const action = deletePost(1);
 
     expect(reducer(state, action)).toEqual({
-      posts: []
+      posts: [],
+      comments: []
     });
   });
 });
