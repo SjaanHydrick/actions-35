@@ -18,6 +18,17 @@ describe('comment reducer', () => {
     expect(newState).toEqual({
       comments: [{ body: 'asdf', id: 1, postId: 1 }]
     });
+  });
 
+  it('deletes a comment with DELETE_COMMENT action', () => {
+    const state = {
+      comments: [{ body: 'asdf', id: 1, postId: 1 }]
+    };
+
+    const action = deleteComment(1);
+
+    expect(reducer(state, action)).toEqual({
+      comments: []
+    });
   });
 });
