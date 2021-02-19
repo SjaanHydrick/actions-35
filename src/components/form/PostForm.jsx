@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { createPost } from '../../actions/postActions';
-import { useDispatch } from 'react-redux';
+import { createPost, updatePostId } from '../../actions/postActions';
+import { useDispatch, useSelector } from 'react-redux';
+import { getPostId } from '../../selector/postSelectors';
 import styles from './PostForm.css';
 
 const PostForm = () => {
   const dispatch = useDispatch();
+  const postId = useSelector(getPostId);
 
-  const [id, setId] = useState(1);
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
 
@@ -14,12 +15,10 @@ const PostForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     
-    setId(id + 1);
-    
+    const id = postId + 1;
+    dispatch(updatePostId(id));
     dispatch(createPost({ id, title, body }));
   };
-  
-  console.log(id);
   
   return (
     <form onSubmit={handleSubmit}>
