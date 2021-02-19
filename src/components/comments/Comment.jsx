@@ -1,7 +1,9 @@
+/* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteComment } from '../../actions/commentActions';
+import styles from './Comment.css';
 
 const Comment = ({ id, body }) => {
   const dispatch = useDispatch();
@@ -11,14 +13,12 @@ const Comment = ({ id, body }) => {
   };
 
   return (
-    <>
-      <div>
-        <p>{body}</p>
-        <p>
-          <button onClick={handleClick}>Delete</button>
-        </p>
-      </div>
-    </>
+    <div className={styles.comments}>
+      <p>{body}</p>
+      <p>
+        <button className={styles.deletecomment} onClick={handleClick}>Delete</button>
+      </p>
+    </div>
   );
 };
 

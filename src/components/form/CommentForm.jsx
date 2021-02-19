@@ -3,6 +3,7 @@ import { createComment, updateCommentId } from '../../actions/commentActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getCommentId } from '../../selector/commentSelectors';
+import styles from './Form.css';
 
 const CommentForm = () => {
   const dispatch = useDispatch();
@@ -30,7 +31,7 @@ const CommentForm = () => {
         value={body}
         onChange={({ target }) => setBody(target.value)}
       />
-      <button>Submit Comment</button>
+      <button className={styles.create}>Submit Comment</button>
     </form>
   );
 };

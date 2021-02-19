@@ -12,6 +12,7 @@ const CommentList = () => {
 
   const commentElements = comments.map(comment => (
     <div key={comment.id}>
+      <h3>Comments: </h3>
       <Comment {...comment} />
     </div>
   ));

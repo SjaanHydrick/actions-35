@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { createPost, updatePostId } from '../../actions/postActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPostId } from '../../selector/postSelectors';
-import styles from './PostForm.css';
+import styles from './Form.css';
 
 const PostForm = () => {
   const dispatch = useDispatch();

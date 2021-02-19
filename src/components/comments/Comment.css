@@ -1,0 +1,14 @@
+.homebutton {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+}
+
+.comments {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    border: solid 1px white;
+    margin: 0;
+}
+
+.deletecomment {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
