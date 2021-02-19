@@ -1,10 +1,14 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { getComments } from '../../selector/commentSelectors';
 import Comment from './Comment';
 
 const CommentList = () => {
-  const comments = useSelector(getComments);
+  const paramId = useParams();
+  const postId = paramId.id;
+  const comments = useSelector(getComments).filter(comment => comment.postId === postId);
 
   const commentElements = comments.map(comment => (
     <div key={comment.id}>
