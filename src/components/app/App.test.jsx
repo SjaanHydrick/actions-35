@@ -1,15 +1,16 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import App from './App';
-import { PostProvider } from '../../state/PostProvider';
+import { Provider } from 'react-redux';
+import store from '../../store';
 
 describe('App component', () => {
   afterEach(() => cleanup());
   it('renders App', () => {
     const { asFragment } = render(
-      <PostProvider>
+      <Provider store={store}>
         <App />
-      </PostProvider>
+      </Provider>
     );
     expect(asFragment()).toMatchSnapshot();
   });
